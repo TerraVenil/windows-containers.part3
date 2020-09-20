@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  api_url: http://imageyrotator.imageyrotator-app.svc.cluster.local
+kind: ConfigMap
+metadata:
+  name: imageyrotator-config
+  namespace: imageyrotator-app

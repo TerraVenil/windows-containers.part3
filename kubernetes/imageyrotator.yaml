@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imageyrotator
+  namespace: imageyrotator-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imageyrotator
+  template:
+    metadata:
+      labels:
+        app: imageyrotator
+    spec:
+      serviceAccountName: imageyrotator-service-account
+      containers:
+      - name: imageyrotator
+        image: terravenil/imageyrotator:v1.0
+        ports:
+        - containerPort: 5000
+          name: http
