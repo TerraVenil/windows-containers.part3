@@ -15,7 +15,7 @@ spec:
     spec:
       serviceAccountName: frontend-service-account
       containers:
-        - image: terravenil/imageyrotator-fronend:v1.0
+        - image: terravenil/imageyrotator-frontend:v1.0
           name: frontend
           env:
             - name: API_URL
