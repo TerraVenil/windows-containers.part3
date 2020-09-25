@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: imageyrotator-app
+spec:
+  selector:
+    app: frontend
+  ports:
+    - port: 80
+      name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: imageyrotator
+  namespace: imageyrotator-app
+spec:
+  selector:
+    app: imageyrotator
+  ports:
+    - port: 80
+      name: imageyrotator-port
+      targetPort: 5000
